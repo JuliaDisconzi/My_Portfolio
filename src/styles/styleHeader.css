@@ -1,0 +1,24 @@
+/* assets/styles/styleHeader.css */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  

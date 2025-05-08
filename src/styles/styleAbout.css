@@ -1,0 +1,127 @@
+.about-wrapper {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  background-color: #333;
+  overflow: hidden;
+  flex-direction: row; /* Para telas grandes, a imagem e o texto ficam lado a lado */
+}
+
+.about-content {
+  display: flex;
+  flex: 1;
+  z-index: 1;
+  flex-direction: row; /* Por padrão, lado a lado */
+  justify-content: space-between;
+}
+
+.text-content {
+  flex: 1;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+.sobre {
+  color: white;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.mim {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.text-content p {
+  font-size: 2rem;
+  line-height: 1.7;
+  border: #f79ce0 solid 2px;
+  padding: 1rem;
+}
+
+.text-content .destaque {
+  color: #8b5cf6;
+  font-weight: bold;
+}
+
+.image-container {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+
+.image-container img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  border-left: 4px solid #222;
+}
+
+/* Media Queries para telas menores */
+
+@media (max-width: 1024px) {
+  .about-wrapper {
+    height: auto; /* Permite que o conteúdo se ajuste a telas menores */
+    flex-direction: column; /* Em telas menores, o texto e a imagem ficam em uma coluna */
+  }
+
+  .about-content {
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-content {
+    padding: 2rem 1rem; /* Menos padding em telas menores */
+    font-size: 1.6rem; /* Ajusta o tamanho do texto */
+  }
+
+  .mim {
+    font-size: 3rem; /* Ajusta o tamanho do texto da palavra "mim" */
+  }
+
+  .image-container img {
+    width: 100%; /* A imagem ocupa toda a largura disponível */
+    height: auto; /* Ajusta a altura para manter a proporção */
+  }
+}
+
+@media (max-width: 600px) {
+  .text-content {
+    padding: 1.5rem 1rem; /* Ajuste no padding */
+    font-size: 1.4rem; /* Texto um pouco menor */
+  }
+
+  .mim {
+    font-size: 2.5rem; /* Reduz o tamanho do texto da palavra "mim" */
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .image-container img {
+    position: relative; /* ou static */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-left: none; /* remove a borda lateral se quiser */
+    border-top: 4px solid #222; /* ou uma borda no topo, opcional */
+  }
+}
